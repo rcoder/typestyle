@@ -12,6 +12,6 @@ describe('@supports', () => {
         }
       }
     });
-    assert.equal(getStyles(), '.f5f13tn{color:red}@supports (display: flex){.f5f13tn{color:white}}');
+    assert.equal(getStyles(), '.f1u5z8ro{color:red}@supports (display: flex){.f1u5z8ro{color:white}}');
   });
 });

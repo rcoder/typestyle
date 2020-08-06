@@ -21,7 +21,7 @@ describe("media query", () => {
   it("support type", () => {
     reinit();
     style({ color: 'red' }, media({ minWidth: 400, type: 'screen' }, { color: 'red' }));
-    assert.equal(getStyles(), '.f1960l9c{color:red}@media screen and (min-width: 400px){.f1960l9c{color:red}}');
+    assert.equal(getStyles(), '.f1cm3m8v{color:red}@media screen and (min-width: 400px){.f1cm3m8v{color:red}}');
   });
 
   it("support $nest", () => {
@@ -36,7 +36,7 @@ describe("media query", () => {
           }
         }
       }));
-    assert.equal(getStyles(), '@media (min-width: 400px){.f1wrs385{color:red}.f1wrs385:hover{color:green}}');
+    assert.equal(getStyles(), '@media (min-width: 400px){.f1ehadqt{color:red}.f1ehadqt:hover{color:green}}');
   });
 
   it("support non-pixel min-width", () => {

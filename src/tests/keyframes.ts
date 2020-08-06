@@ -10,7 +10,7 @@ describe("keyframes", () => {
         to: { opacity: 1 }
       });
 
-      assert.equal(animationName, 'fade-in_f1gwuh0p');
+      assert.equal(animationName, 'fu00fm1');
   });
 
   it('supports generated animation name', () => {
@@ -20,6 +20,6 @@ describe("keyframes", () => {
       to: { opacity: 1 }
     });
 
-    assert.equal(animationName, 'f1gwuh0p');
+    assert.equal(animationName, 'fu00fm1');
   });
 });

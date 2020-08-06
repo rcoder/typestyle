@@ -21,19 +21,19 @@ describe("initial test", () => {
   it("child same", () => {
     reinit();
     style({ color: 'red', $nest: { '&>*': { color: 'red' } } });
-    assert.equal(getStyles(), '.f1nv0def,.f1nv0def>*{color:red}');
+    assert.equal(getStyles(), '.fxvpbc,.fxvpbc>*{color:red}');
   });
 
   it("child same unique", () => {
     reinit();
     style({ color: 'red', $nest: { '&>*': { color: 'red', $unique: true } } });
-    assert.equal(getStyles(), '.f1nv0def{color:red}.f1nv0def>*{color:red}');
+    assert.equal(getStyles(), '.fxvpbc{color:red}.fxvpbc>*{color:red}');
   });
 
   it("child different", () => {
     reinit();
     style({ color: 'red', $nest: { '&>*': { color: 'blue' } } });
-    assert.equal(getStyles(), '.fv84gyi{color:red}.fv84gyi>*{color:blue}');
+    assert.equal(getStyles(), '.f17jnn39{color:red}.f17jnn39>*{color:blue}');
   });
 
   it("media same", () => {
@@ -44,13 +44,13 @@ describe("initial test", () => {
         '@media (min-width: 400px)': { color: 'red' }
       }
     });
-    assert.equal(getStyles(), '.f12z113b{color:red}@media (min-width: 400px){.f12z113b{color:red}}');
+    assert.equal(getStyles(), '.f7u1jp4{color:red}@media (min-width: 400px){.f7u1jp4{color:red}}');
   });
 
   it("media different", () => {
     reinit();
     style({ color: 'red', $nest: { '@media (min-width: 400px)': { color: 'blue' } } });
-    assert.equal(getStyles(), '.fxfrsga{color:red}@media (min-width: 400px){.fxfrsga{color:blue}}');
+    assert.equal(getStyles(), '.f13h18xh{color:red}@media (min-width: 400px){.f13h18xh{color:blue}}');
   });
 
   it("classes should compose", () => {
@@ -64,7 +64,7 @@ describe("initial test", () => {
     reinit();
     cssRule('.transparent', { color: 'transparent' });
     style({ color: 'transparent' });
-    assert.equal(getStyles(), '.transparent,.fwarpl0{color:transparent}');
+    assert.equal(getStyles(), '.transparent{color:transparent}.fwarpl0{color:transparent}');
   });
 
   it("should support dedupe by default", () => {
@@ -83,7 +83,7 @@ describe("initial test", () => {
         }
       }
     });
-    assert.equal(getStyles(), '.f13byakl{color:blue}.f13byakl::-webkit-input-placeholder,.f13byakl::-moz-placeholder,.f13byakl::-ms-input-placeholder{color:rgba(0, 0, 0, 0)}');
+    assert.equal(getStyles(), '.f1p4wti2{color:blue}.f1p4wti2::-webkit-input-placeholder,.f1p4wti2::-moz-placeholder,.f1p4wti2::-ms-input-placeholder{color:rgba(0, 0, 0, 0)}');
   });
 
   it("should support $unique", () => {
@@ -105,7 +105,7 @@ describe("initial test", () => {
         }
       }
     });
-    assert.equal(getStyles(), '.f13byakl{color:blue}.f13byakl::-webkit-input-placeholder{color:rgba(0, 0, 0, 0)}.f13byakl::-moz-placeholder{color:rgba(0, 0, 0, 0)}.f13byakl::-ms-input-placeholder{color:rgba(0, 0, 0, 0)}');
+    assert.equal(getStyles(), '.f1p4wti2{color:blue}.f1p4wti2::-webkit-input-placeholder{color:rgba(0, 0, 0, 0)}.f1p4wti2::-moz-placeholder{color:rgba(0, 0, 0, 0)}.f1p4wti2::-ms-input-placeholder{color:rgba(0, 0, 0, 0)}');
   });
 
   it("should support $debugName", () => {
@@ -119,7 +119,7 @@ describe("initial test", () => {
         }
       }
     });
-    assert.equal(getStyles(), '.sample_fy3xmhm{color:blue}.sample_fy3xmhm:hover{color:rgba(0, 0, 0, 0)}');
+    assert.equal(getStyles(), '.sample_fyguhj9{color:blue}.sample_fyguhj9:hover{color:rgba(0, 0, 0, 0)}');
   });
 
   it("should generate meaningful classnames using stylesheet", () => {
